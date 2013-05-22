@@ -1,0 +1,13 @@
+.field
+  %u Disciplines
+  -# TODO: Check out _factions_input.html.haml to see a metaprogramming way to do this.
+    The way it is done in factions makes it easier to add new ones
+  %br
+  = label_tag 'fighter_discipline', 'Fighter'
+  = check_box_tag 'fighter_discipline', 'fighter', @champion.fighter?, :name => 'champion[disciplines][]'
+  %br
+  = label_tag 'caster_discipline', 'Caster'
+  = check_box_tag 'caster_discipline', 'caster', @champion.caster?, :name => 'champion[disciplines][]'
+  %br
+  = label_tag 'summoner_discipline', 'Summoner'
+  = check_box_tag 'summoner_discipline', 'summoner', @champion.summoner?, :name => 'champion[disciplines][]'

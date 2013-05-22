@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @champion.name
+%p
+  %b Attack:
+  = @champion.attack
+%p
+  %b Aura:
+  = @champion.aura
+%p
+  %b Energy:
+  = @champion.energy
+%p
+  %b Health:
+  = @champion.health
+%p
+  %b Ability:
+  = @champion.ability
+%p
+  %b Factions:
+  = @champion.factions
+%p
+  %b Disciplines:
+  = @champion.disciplines
+%p
+  %b Set:
+  = @champion.set_id
+%p
+  %b Card number:
+  = @champion.card_number
+%p
+  %b Rarity:
+  = @champion.rarity
+
+= link_to 'Edit', edit_champion_path(@champion)
+\|
+= link_to 'Back', champions_path

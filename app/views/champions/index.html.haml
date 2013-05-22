@@ -1,0 +1,39 @@
+%h1 Listing champions
+
+%table
+  %tr
+    %th Name
+    %th Attack
+    %th Aura
+    %th Energy
+    %th Health
+    %th Ability
+    %th Factions
+    %th Disciplines
+    %th Set
+    %th Card number
+    %th Rarity
+    %th
+    %th
+    %th
+
+  - @champions.each do |champion|
+    %tr
+      %td= champion.name
+      %td= champion.attack
+      %td= champion.aura
+      %td= champion.energy
+      %td= champion.health
+      %td= champion.ability
+      %td= champion.factions
+      %td= champion.disciplines
+      %td= champion.set_id
+      %td= champion.card_number
+      %td= champion.rarity
+      %td= link_to 'Show', champion
+      %td= link_to 'Edit', edit_champion_path(champion)
+      %td= link_to 'Destroy', champion, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Champion', new_champion_path

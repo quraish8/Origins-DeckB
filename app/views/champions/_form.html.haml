@@ -1,0 +1,39 @@
+= form_for @champion do |f|
+  - if @champion.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@champion.errors.count, "error")} prohibited this champion from being saved:"
+      %ul
+        - @champion.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :attack
+    = f.number_field :attack
+  .field
+    = f.label :aura
+    = f.number_field :aura
+  .field
+    = f.label :energy
+    = f.number_field :energy
+  .field
+    = f.label :health
+    = f.number_field :health
+  .field
+    = f.label :ability
+    = f.text_area :ability
+  = render 'shared/factions_input'
+  = render 'shared/disciplines_input'
+  .field
+    = f.label :set_id
+    = f.number_field :set_id
+  .field
+    = f.label :card_number
+    = f.number_field :card_number
+  .field
+    = f.label :rarity
+    = f.text_field :rarity
+  .actions
+    = f.submit 'Save'

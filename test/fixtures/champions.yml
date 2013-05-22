@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  attack: 1
+  aura: 1
+  energy: 1
+  health: 1
+  ability: MyText
+  factions_json: ['Judgement']
+  disciplines_json: ['Caster']
+  set_id: 1
+  card_number: 1
+  rarity: MyString
+
+two:
+  name: MyString
+  attack: 1
+  aura: 1
+  energy: 1
+  health: 1
+  ability: MyText
+  factions_json: ['Phage']
+  disciplines_json: ['Fighter']
+  set_id: 1
+  card_number: 1
+  rarity: MyString

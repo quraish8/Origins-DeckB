@@ -1,0 +1,7 @@
+.field
+  %u Factions
+  - Champion::FACTIONS.each do |faction|
+    %br
+    = label_tag "#{faction}_faction", faction.capitalize
+    = check_box_tag "#{faction}_faction", faction, @champion.send("#{faction}?"), :name => 'champion[factions][]'
+
