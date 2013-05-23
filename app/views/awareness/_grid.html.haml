@@ -1,0 +1,18 @@
+-# TODO: This should be in an actual class.  I'm just hella-lazy
+- awareness = {height: 3, width: 3, focal: [1, 1], summon_spots: [[0,1], [1,2], [2,1]], casting_spots: [[1,2]], attack_spots: [[1,2]]}
+- set_methods(awareness)
+
+- height = awareness[:height] - 1
+- width = awareness[:width] - 1
+%table
+  - (0..height).to_a.reverse.each do |y|
+    %tr
+      - (0..width).each do |x|
+        - spot = [x, y]
+        %td{:class => classes_for_square(spot, awareness)}
+          - if awareness.is_focal?(spot)
+            %span= focal
+          - if awareness.is_casting?(spot)
+            %span= casting
+          - if awareness.is_attacking?(spot)
+            %span= attack

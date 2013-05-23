@@ -1,0 +1,15 @@
+.square {
+  border: 1px solid;
+  height: 18px;
+  width: 18px;
+  position: relative;
+}
+.square span {
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  font-size: 18px;
+}
+.square.summon {
+  background: #AAFFAA;
+}
