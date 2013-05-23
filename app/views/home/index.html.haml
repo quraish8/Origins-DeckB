@@ -6,8 +6,10 @@
 
 - current_user = "Assad"
 
-%li
-  %ul first item
-  %ul second item
-  %ul
+%ul
+  %li first item
+  %li second item
+  %li
     %b= "Hi #{current_user}, you are #{20 * 3} points away!"
+
+= render('awareness/grid')
